@@ -6,3 +6,81 @@
 body {
 	font-family: sans-serif;
 }
+
+$cc-blue: #1691cf;
+$cc-green: #3fb24e;
+$cc-red: #f34141;
+$cc-white: #fcfeff;
+$cc-dishes: #bbcad2;
+$cc-dust-gray: #969696;
+$cc-light-shark: #2e3133;
+$cc-shark: #292d2f;
+
+button{
+
+    &:focus{
+        outline: none;
+        border: none;
+    }
+
+}
+
+.btn.primary{
+    background: $cc-green;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-shadow: 0 1px 3px darken($cc-green, 30%);
+    border-bottom: 3px solid darken($cc-green, 10%);
+    padding: 0.5rem 2rem 0.6rem;
+    -webkit-box-shadow: 0 1px 3px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px 3px rgba(0,0,0,0.1);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: $cc-white;
+    cursor: pointer;
+
+    &:hover{
+        background: lighten($cc-green, 5%);
+    }
+
+    i{
+       margin-left: 10px;
+    }
+
+    &.small{
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+}
+
+.btn.submit{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    float:left;
+    width: 20%;
+    height: 2.3125rem;
+    background: $cc-shark;
+    text-shadow: 0 1px 3px darken($cc-shark, 20);
+    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid darken($cc-shark, 20);
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    &:hover{
+        background: lighten($cc-shark, 15);
+        border-bottom: 3px solid lighten($cc-shark, 5);
+        -webkit-transform: background, 0.25s;
+        -moz-transform: background, 0.25s;
+        -ms-transform: background, 0.25s;
+        -o-transform: background, 0.25s;
+        transform: background, 0.25s;
+    }
+}
