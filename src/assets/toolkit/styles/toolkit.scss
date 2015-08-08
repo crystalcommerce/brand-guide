@@ -3,84 +3,157 @@
  */
 
 
-body {
-	font-family: sans-serif;
+*{
+	font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	box-sizing: border-box;
 }
 
-$cc-blue: #1691cf;
-$cc-green: #3fb24e;
-$cc-red: #f34141;
-$cc-white: #fcfeff;
-$cc-dishes: #bbcad2;
-$cc-dust-gray: #969696;
-$cc-light-shark: #2e3133;
-$cc-shark: #292d2f;
+$cc-blue:         #1691cf;
+$cc-green:        #3fb24e;
+$cc-red:          #f34141;
+$cc-white:        #fcfeff;
+$cc-dishes:       #bbcad2;
+$cc-dust-gray:    #969696;
+$cc-light-shark:  #2e3133;
+$cc-shark:        #292d2f;
 
-button{
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-    &:focus{
+a {
+    color: $cc-blue;
+    line-height: inherit;
+	text-decoration: none;
+    transition:all 0.3s ease;
+}
+
+button {
+
+    &:focus {
         outline: none;
         border: none;
     }
 
 }
 
-.btn.primary{
-    background: $cc-green;
-    -webkit-border-radius: 40px;
+.btn {
     border-radius: 40px;
     font-size: 1.5rem;
     font-weight: 400;
-    text-shadow: 0 1px 3px darken($cc-green, 30%);
-    border-bottom: 3px solid darken($cc-green, 10%);
-    padding: 0.5rem 2rem 0.6rem;
-    -webkit-box-shadow: 0 1px 3px 3px rgba(0,0,0,0.1);
-    box-shadow: 0 1px 3px 3px rgba(0,0,0,0.1);
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    color: $cc-white;
+	padding: 0.5rem 2rem 0.6rem;
+	box-shadow: 0 1px 3px 3px rgba(0,0,0,0.1);
+	color: $cc-white;
     cursor: pointer;
 
-    &:hover{
-        background: lighten($cc-green, 5%);
+    &:hover {
+        transform: background, 0.25s;
     }
 
-    i{
-       margin-left: 10px;
-    }
-
-    &.small{
+    &.small {
         font-size: 1rem;
         padding: 0.5rem 1.5rem;
     }
 
+    i {
+       margin-left: 10px;
+    }
 }
 
-.btn.submit{
-    border: none;
-    padding: 0px;
-    margin: 0px;
-    float:left;
-    width: 20%;
-    height: 2.3125rem;
+.btn.primary {
+    background: $cc-green;
+    text-shadow: 0 1px 3px darken($cc-green, 30);
+    border-bottom: 3px solid darken($cc-green, 10);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    &:hover {
+        background: lighten($cc-green, 5);
+        border-bottom: 3px solid darken($cc-green, 5);
+    }
+}
+
+.btn.secondary {
     background: $cc-shark;
     text-shadow: 0 1px 3px darken($cc-shark, 20);
-    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid darken($cc-shark, 20);
-    -webkit-border-top-right-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    -moz-border-radius-topright: 5px;
-    -moz-border-radius-bottomright: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    &:hover{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    &:hover {
         background: lighten($cc-shark, 15);
         border-bottom: 3px solid lighten($cc-shark, 5);
-        -webkit-transform: background, 0.25s;
-        -moz-transform: background, 0.25s;
-        -ms-transform: background, 0.25s;
-        -o-transform: background, 0.25s;
-        transform: background, 0.25s;
     }
+}
+
+.tab-triggers {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid lighten($cc-dishes, 15%);
+
+    li{
+        float: left;
+        border-left: 1px solid lighten($cc-dishes, 15%);
+        list-style: none;
+
+        &:first-child {
+            border-left: none;
+        }
+    }
+
+    a{
+        color: $cc-blue;
+        font-size: 1.3rem;
+        padding: 0 20px 8px;
+        transition: border 0s ease;
+
+        &:hover {
+            color: lighten($cc-blue, 10%);
+        }
+
+        &.active {
+            color: $cc-shark;
+            border-bottom: 3px solid $cc-shark;
+        }
+    }
+}
+
+.tab-content {
+    display:none;
+
+    &.active {
+        display:block;
+    }
+}
+
+.read-more {
+    display: block;
+    margin-top: 10px;
+}
+
+.update {
+
+    &:before {
+        font-family: 'FontAwesome';
+        content: '\f00c';
+        position: relative;
+        top: 35px;
+        left: -26px;
+        font-size: 1.1em;
+    }
+
+}
+
+hr {
+	border: solid $cc-dishes;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 1.25rem 0 1.1875rem;
+    height: 0;
 }
