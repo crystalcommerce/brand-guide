@@ -2,12 +2,6 @@
  * Toolkit styles
  */
 
-
-*{
-	font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-	box-sizing: border-box;
-}
-
 $cc-blue:         #1691cf;
 $cc-green:        #3fb24e;
 $cc-red:          #f34141;
@@ -16,6 +10,15 @@ $cc-dishes:       #bbcad2;
 $cc-dust-gray:    #969696;
 $cc-light-shark:  #2e3133;
 $cc-shark:        #292d2f;
+
+@import 'normalize';
+@import 'foundation-custom';
+
+*{
+    font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    box-sizing: border-box;
+    color: $cc-shark;
+}
 
 nav ul {
     list-style: none;
